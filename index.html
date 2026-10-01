@@ -1,0 +1,1924 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Planos de internet 100% fibra da Amigo Internet."
+  >
+
+  <title>Amigo Internet | Internet 100% Fibra</title>
+
+  <style>
+    :root {
+      --navy: #141B4D;
+      --cyan: #00AFD7;
+      --orange: #FF671F;
+
+      --orange-dark: #e95712;
+
+      --black: #101010;
+      --gray: #666;
+      --light: #f5f8fa;
+      --white: #fff;
+      --border: #e4e8ec;
+
+      --green: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--navy);
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 25px;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: #fff;
+
+      padding: 11px 18px;
+      border-radius: 999px;
+
+      transition: .2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       BOTÕES
+    ========================== */
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      justify-content: center;
+      align-items: center;
+
+      border: 0;
+      cursor: pointer;
+
+      border-radius: 12px;
+
+      padding: 15px 22px;
+
+      font-weight: 900;
+
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+
+      box-shadow: 0 10px 25px rgba(255,103,31,.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #0d1238;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(0,175,215,.18) 0,
+          rgba(255,255,255,0) 34%
+        ),
+
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(255,103,31,.10) 0,
+          rgba(255,255,255,0) 30%
+        ),
+
+        #fff;
+
+      padding: 82px 0 70px;
+
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.05fr .95fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      gap: 8px;
+
+      align-items: center;
+
+      background: #e9f9fd;
+
+      color: var(--navy);
+
+      padding: 8px 13px;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: .98;
+
+      letter-spacing: -3px;
+
+      max-width: 680px;
+    }
+
+    h1 span {
+      color: var(--cyan);
+    }
+
+    .hero p {
+      font-size: 19px;
+
+      color: #555;
+
+      max-width: 570px;
+
+      margin: 24px 0 30px;
+    }
+
+    /* =========================
+       HERO CARD
+    ========================== */
+
+    .hero-card {
+      background: var(--navy);
+
+      color: #fff;
+
+      border-radius: 30px;
+
+      padding: 34px;
+
+      position: relative;
+
+      box-shadow:
+        0 25px 70px rgba(20,27,77,.22);
+    }
+
+    .hero-card .label {
+      color: #9de9f8;
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+    }
+
+    .hero-card .speed {
+      font-size: 72px;
+
+      font-weight: 950;
+
+      letter-spacing: -5px;
+
+      line-height: 1;
+
+      margin-top: 8px;
+    }
+
+    .hero-card .mega {
+      color: var(--cyan);
+
+      font-weight: 800;
+    }
+
+    .hero-card hr {
+      border: 0;
+
+      border-top: 1px solid rgba(255,255,255,.15);
+
+      margin: 25px 0;
+    }
+
+    .hero-card li {
+      list-style: none;
+
+      margin: 12px 0;
+
+      color: #ddd;
+    }
+
+    .hero-card li::before {
+      content: "✓";
+
+      color: var(--orange);
+
+      font-weight: 900;
+
+      margin-right: 9px;
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================== */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-head {
+      text-align: center;
+
+      margin-bottom: 42px;
+    }
+
+    .section-head h2 {
+      font-size: 40px;
+
+      letter-spacing: -1.8px;
+
+      color: var(--navy);
+    }
+
+    .section-head p {
+      color: var(--gray);
+
+      margin-top: 10px;
+    }
+
+    /* =========================
+       PLANOS
+    ========================== */
+
+    .plans {
+      background: var(--light);
+    }
+
+    .category-title {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 35px 0 18px;
+
+      color: var(--navy);
+    }
+
+    .category-title:first-child {
+      margin-top: 0;
+    }
+
+    .category-title h3 {
+      font-size: 23px;
+
+      letter-spacing: -.7px;
+
+      white-space: nowrap;
+    }
+
+    .category-title .line {
+      height: 3px;
+
+      flex: 1;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--cyan),
+          transparent
+        );
+
+      border-radius: 10px;
+    }
+
+    .plan-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .plan-grid.streaming {
+      grid-template-columns: repeat(2, 1fr);
+
+      max-width: 760px;
+
+      margin: 0 auto;
+    }
+
+    .plan {
+      background: #fff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: 25px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-height: 350px;
+
+      transition: .2s;
+
+      position: relative;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 18px 45px rgba(20,27,77,.10);
+    }
+
+    .plan.featured {
+      border: 2px solid var(--orange);
+    }
+
+    .badge {
+      position: absolute;
+
+      top: -13px;
+
+      right: 18px;
+
+      background: var(--orange);
+
+      color: #fff;
+
+      padding: 5px 10px;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+
+      font-weight: 900;
+    }
+
+    .plan h3 {
+      font-size: 18px;
+
+      color: var(--navy);
+    }
+
+    .speed-number {
+      font-size: 42px;
+
+      font-weight: 950;
+
+      letter-spacing: -2px;
+
+      margin: 12px 0 0;
+
+      color: var(--navy);
+    }
+
+    .speed-number small {
+      font-size: 18px;
+
+      letter-spacing: 0;
+    }
+
+    .price {
+      margin: 8px 0 20px;
+    }
+
+    .price strong {
+      font-size: 29px;
+
+      color: var(--orange);
+    }
+
+    .price span {
+      font-size: 13px;
+
+      color: #777;
+    }
+
+    .plan ul {
+      margin-bottom: 25px;
+    }
+
+    .plan li {
+      list-style: none;
+
+      font-size: 14px;
+
+      margin: 9px 0;
+
+      color: #555;
+    }
+
+    .plan li::before {
+      content: "✓";
+
+      color: var(--cyan);
+
+      font-weight: 900;
+
+      margin-right: 8px;
+    }
+
+    .plan .btn {
+      margin-top: auto;
+
+      width: 100%;
+    }
+
+    /* =========================
+       BENEFÍCIOS
+    ========================== */
+
+    .benefits {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .benefit {
+      padding: 28px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+    }
+
+    .icon {
+      font-size: 30px;
+
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 8px;
+
+      color: var(--navy);
+    }
+
+    .benefit p {
+      color: var(--gray);
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       QUIZ
+    ========================== */
+
+    .quiz {
+      background: var(--navy);
+
+      color: #fff;
+    }
+
+    .quiz .section-head h2 {
+      color: #fff;
+    }
+
+    .quiz .section-head p {
+      color: #bfc6df;
+    }
+
+    .quiz-box {
+      max-width: 780px;
+
+      margin: auto;
+
+      background: #10163f;
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      border-radius: 25px;
+
+      padding: 35px;
+    }
+
+    .quiz-step {
+      display: none;
+    }
+
+    .quiz-step.active {
+      display: block;
+    }
+
+    .quiz h2 {
+      font-size: 34px;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 8px;
+    }
+
+    .quiz p {
+      color: #aaa;
+
+      margin-bottom: 25px;
+    }
+
+    .options {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 12px;
+    }
+
+    .option {
+      background: #181f50;
+
+      color: #fff;
+
+      border: 1px solid #303866;
+
+      padding: 18px;
+
+      border-radius: 14px;
+
+      cursor: pointer;
+
+      text-align: left;
+
+      font-weight: 800;
+
+      transition: .2s;
+    }
+
+    .option:hover {
+      border-color: var(--cyan);
+
+      transform: translateY(-2px);
+    }
+
+    .result {
+      display: none;
+
+      text-align: center;
+    }
+
+    .result.show {
+      display: block;
+    }
+
+    .result .recommended {
+      font-size: clamp(38px, 7vw, 58px);
+
+      color: var(--cyan);
+
+      font-weight: 950;
+
+      margin: 8px 0 10px;
+    }
+
+    .result .result-price {
+      font-size: 22px;
+
+      font-weight: 800;
+
+      color: #fff;
+
+      margin-bottom: 10px;
+    }
+
+    .result .result-description {
+      color: #c8cee0;
+
+      margin-bottom: 24px;
+    }
+
+    .result .btn {
+      min-width: 250px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #0c1030;
+
+      color: #fff;
+
+      padding: 40px 0;
+    }
+
+    .footer-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      align-items: center;
+    }
+
+    footer .logo {
+      color: #fff;
+    }
+
+    footer p {
+      color: #aaa;
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================== */
+
+    .wa {
+      position: fixed;
+
+      right: 22px;
+
+      bottom: 22px;
+
+      width: 58px;
+
+      height: 58px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      display: grid;
+
+      place-items: center;
+
+      color: #fff;
+
+      font-size: 27px;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.2);
+
+      z-index: 30;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================== */
+
+    @media(max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .plan-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+    }
+
+    @media(max-width: 600px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav {
+        height: 62px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .plan-grid,
+      .plan-grid.streaming {
+        grid-template-columns: 1fr;
+
+        max-width: none;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .hero-card .speed {
+        font-size: 58px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .category-title h3 {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a class="logo" href="#">
+        amigo<span>.</span>
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="#planos">
+          Planos
+        </a>
+
+        <a href="#beneficios">
+          Benefícios
+        </a>
+
+        <a href="#consultor">
+          Escolha seu plano
+        </a>
+
+        <a
+          class="nav-cta"
+          href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20os%20planos%20da%20Amigo%20Internet."
+          target="_blank"
+        >
+          Falar no WhatsApp
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            ⚡ Internet 100% fibra
+          </div>
+
+          <h1>
+            Internet para acompanhar
+            <span>a sua vida.</span>
+          </h1>
+
+          <p>
+            Planos de alta velocidade para navegar,
+            trabalhar, jogar e assistir seus conteúdos
+            favoritos com conexão por fibra.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              class="btn btn-primary"
+              href="#planos"
+            >
+              Ver planos
+            </a>
+
+            <a
+              class="btn btn-dark"
+              href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Amigo%20Internet%20e%20quero%20conhecer%20os%20planos."
+              target="_blank"
+            >
+              Falar no WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD DESTAQUE -->
+
+        <div class="hero-card">
+
+          <div class="label">
+            PLANO DESTAQUE
+          </div>
+
+          <div class="speed">
+            700
+            <span class="mega">
+              Mbps
+            </span>
+          </div>
+
+          <hr>
+
+          <ul>
+
+            <li>
+              100% fibra óptica
+            </li>
+
+            <li>
+              Wi-Fi 6
+            </li>
+
+            <li>
+              R$ 109,90 por mês
+            </li>
+
+            <li>
+              Excelente para família
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PLANOS
+    ========================== -->
+
+    <section
+      id="planos"
+      class="plans"
+    >
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Escolha seu plano
+          </h2>
+
+          <p>
+            Internet rápida, simples e do seu jeito.
+          </p>
+
+        </div>
+
+
+        <!-- INTERNET -->
+
+        <div class="category-title">
+
+          <h3>
+            🌐 Internet
+          </h3>
+
+          <div class="line"></div>
+
+        </div>
+
+
+        <div class="plan-grid">
+
+
+          <!-- 500 -->
+
+          <article class="plan">
+
+            <h3>
+              500 Mbps
+            </h3>
+
+            <div class="speed-number">
+              500
+              <small>
+                Mbps
+              </small>
+            </div>
+
+            <div class="price">
+
+              <strong>
+                R$ 99,90
+              </strong>
+
+              <span>
+                /mês
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                100% fibra
+              </li>
+
+              <li>
+                Wi-Fi 5
+              </li>
+
+              <li>
+                Ótimo para uso cotidiano
+              </li>
+
+            </ul>
+
+            <a
+              class="btn btn-dark"
+              href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Amigo%20Internet%20e%20tenho%20interesse%20no%20plano%20de%20500%20Mbps%20por%20R%24%2099%2C90.%20Gostaria%20de%20saber%20mais."
+              target="_blank"
+            >
+              Quero este plano
+            </a>
+
+          </article>
+
+
+          <!-- 700 -->
+
+          <article class="plan featured">
+
+            <div class="badge">
+              DESTAQUE
+            </div>
+
+            <h3>
+              700 Mbps
+            </h3>
+
+            <div class="speed-number">
+              700
+              <small>
+                Mbps
+              </small>
+            </div>
+
+            <div class="price">
+
+              <strong>
+                R$ 109,90
+              </strong>
+
+              <span>
+                /mês
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                100% fibra
+              </li>
+
+              <li>
+                Wi-Fi 6
+              </li>
+
+              <li>
+                Excelente para família
+              </li>
+
+            </ul>
+
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Amigo%20Internet%20e%20tenho%20interesse%20no%20plano%20de%20700%20Mbps%20por%20R%24%20109%2C90.%20Gostaria%20de%20saber%20mais."
+              target="_blank"
+            >
+              Quero este plano
+            </a>
+
+          </article>
+
+
+          <!-- 1 GIGA -->
+
+          <article class="plan">
+
+            <h3>
+              1 Giga
+            </h3>
+
+            <div class="speed-number">
+              1
+              <small>
+                Gbps
+              </small>
+            </div>
+
+            <div class="price">
+
+              <strong>
+                R$ 149,90
+              </strong>
+
+              <span>
+                /mês
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                100% fibra
+              </li>
+
+              <li>
+                Wi-Fi 6
+              </li>
+
+              <li>
+                Mais velocidade para vários dispositivos
+              </li>
+
+            </ul>
+
+            <a
+              class="btn btn-dark"
+              href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Amigo%20Internet%20e%20tenho%20interesse%20no%20plano%20de%201%20Giga%20por%20R%24%20149%2C90.%20Gostaria%20de%20saber%20mais."
+              target="_blank"
+            >
+              Quero este plano
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- INTERNET + STREAMING -->
+
+        <div class="category-title">
+
+          <h3>
+            🎬 Internet + Streaming
+          </h3>
+
+          <div class="line"></div>
+
+        </div>
+
+
+        <div class="plan-grid streaming">
+
+
+          <!-- 600 STREAMING -->
+
+          <article class="plan">
+
+            <h3>
+              600 Mbps
+            </h3>
+
+            <div class="speed-number">
+              600
+              <small>
+                Mbps
+              </small>
+            </div>
+
+            <div class="price">
+
+              <strong>
+                R$ 114,90
+              </strong>
+
+              <span>
+                /mês
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                100% fibra
+              </li>
+
+              <li>
+                Wi-Fi 6
+              </li>
+
+              <li>
+                Globoplay com anúncios ou Apple TV+
+              </li>
+
+            </ul>
+
+            <a
+              class="btn btn-dark"
+              href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Amigo%20Internet%20e%20tenho%20interesse%20no%20plano%20de%20600%20Mbps%20por%20R%24%20114%2C90%20com%20streaming.%20Gostaria%20de%20saber%20mais."
+              target="_blank"
+            >
+              Quero este plano
+            </a>
+
+          </article>
+
+
+          <!-- 700 STREAMING -->
+
+          <article class="plan">
+
+            <h3>
+              700 Mbps
+            </h3>
+
+            <div class="speed-number">
+              700
+              <small>
+                Mbps
+              </small>
+            </div>
+
+            <div class="price">
+
+              <strong>
+                R$ 129,90
+              </strong>
+
+              <span>
+                /mês
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                100% fibra
+              </li>
+
+              <li>
+                Wi-Fi 6
+              </li>
+
+              <li>
+                HBO Max ou Disney+
+              </li>
+
+            </ul>
+
+            <a
+              class="btn btn-dark"
+              href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Amigo%20Internet%20e%20tenho%20interesse%20no%20plano%20de%20700%20Mbps%20por%20R%24%20129%2C90%20com%20streaming.%20Gostaria%20de%20saber%20mais."
+              target="_blank"
+            >
+              Quero este plano
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFÍCIOS
+    ========================== -->
+
+    <section id="beneficios">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Por que fibra?
+          </h2>
+
+          <p>
+            Uma conexão pensada para a rotina de hoje.
+          </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+
+          <div class="benefit">
+
+            <div class="icon">
+              🚀
+            </div>
+
+            <h3>
+              Alta velocidade
+            </h3>
+
+            <p>
+              Mais velocidade para múltiplos dispositivos
+              e diferentes tipos de uso.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">
+              📶
+            </div>
+
+            <h3>
+              Wi-Fi 5 e Wi-Fi 6
+            </h3>
+
+            <p>
+              Escolha o plano com a tecnologia Wi-Fi
+              que combina com sua necessidade.
+            </p>
+
+          </div>
+
+
+          <div class="benefit">
+
+            <div class="icon">
+              🎬
+            </div>
+
+            <h3>
+              Streaming
+            </h3>
+
+            <p>
+              Opções com benefícios de entretenimento
+              para deixar sua experiência ainda mais completa.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUIZ
+    ========================== -->
+
+    <section
+      id="consultor"
+      class="quiz"
+    >
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <h2>
+            Qual plano combina com você?
+          </h2>
+
+          <p>
+            Responda duas perguntas e veja uma sugestão.
+          </p>
+
+        </div>
+
+
+        <div class="quiz-box">
+
+
+          <!-- PERGUNTA 1 -->
+
+          <div
+            class="quiz-step active"
+            id="step1"
+          >
+
+            <h2>
+              Quantas pessoas usam a internet?
+            </h2>
+
+            <p>
+              Considere celulares, TVs, computadores,
+              videogames e outros dispositivos.
+            </p>
+
+
+            <div class="options">
+
+              <button
+                class="option"
+                onclick="quizAnswer('users','1-2')"
+              >
+                1 a 2 pessoas
+              </button>
+
+
+              <button
+                class="option"
+                onclick="quizAnswer('users','3-4')"
+              >
+                3 a 4 pessoas
+              </button>
+
+
+              <button
+                class="option"
+                onclick="quizAnswer('users','5+')"
+              >
+                5 ou mais pessoas
+              </button>
+
+
+              <button
+                class="option"
+                onclick="quizAnswer('users','many')"
+              >
+                Muitos dispositivos
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- PERGUNTA 2 -->
+
+          <div
+            class="quiz-step"
+            id="step2"
+          >
+
+            <h2>
+              Como você mais usa a internet?
+            </h2>
+
+            <p>
+              Escolha o uso que mais combina com sua rotina.
+            </p>
+
+
+            <div class="options">
+
+              <button
+                class="option"
+                onclick="quizAnswer('use','basic')"
+              >
+                Redes sociais e navegação
+              </button>
+
+
+              <button
+                class="option"
+                onclick="quizAnswer('use','streaming')"
+              >
+                Streaming e filmes
+              </button>
+
+
+              <button
+                class="option"
+                onclick="quizAnswer('use','games')"
+              >
+                Jogos e trabalho
+              </button>
+
+
+              <button
+                class="option"
+                onclick="quizAnswer('use','all')"
+              >
+                Um pouco de tudo
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- RESULTADO -->
+
+          <div
+            class="result"
+            id="result"
+          >
+
+            <p>
+              Uma opção que pode combinar com seu perfil:
+            </p>
+
+
+            <div
+              class="recommended"
+              id="recommended"
+            >
+              700 Mbps
+            </div>
+
+
+            <div
+              class="result-price"
+              id="resultPrice"
+            >
+              R$ 109,90/mês
+            </div>
+
+
+            <div
+              class="result-description"
+              id="resultDescription"
+            >
+              100% fibra + Wi-Fi 6
+            </div>
+
+
+            <a
+              class="btn btn-primary"
+              id="resultBtn"
+              href="#"
+              target="_blank"
+            >
+              Falar sobre este plano no WhatsApp
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <div>
+
+        <div class="logo">
+          amigo<span>.</span>
+        </div>
+
+        <p>
+          Internet 100% fibra.
+        </p>
+
+      </div>
+
+
+      <p>
+        Valores e condições sujeitos à disponibilidade
+        e regras comerciais vigentes.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       WHATSAPP FLUTUANTE
+  ========================== -->
+
+  <a
+    class="wa"
+    href="https://wa.me/5555996088421?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20os%20planos%20da%20Amigo%20Internet."
+    target="_blank"
+    aria-label="Falar no WhatsApp"
+  >
+    ◉
+  </a>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /*
+      Número do WhatsApp.
+
+      Formato:
+      55 + DDD + número
+
+      5555996088421
+      = Brasil + DDD 55 + número
+    */
+
+    const WHATSAPP_NUMBER = "5555996088421";
+
+
+    /*
+      Respostas do quiz
+    */
+
+    let answers = {
+      users: "",
+      use: ""
+    };
+
+
+    /*
+      Planos disponíveis
+    */
+
+    const plans = {
+
+      "500": {
+        name: "500 Mbps",
+        price: "R$ 99,90/mês",
+        description: "100% fibra + Wi-Fi 5"
+      },
+
+      "600": {
+        name: "600 Mbps",
+        price: "R$ 114,90/mês",
+        description:
+          "100% fibra + Wi-Fi 6 + Globoplay com anúncios ou Apple TV+"
+      },
+
+      "700": {
+        name: "700 Mbps",
+        price: "R$ 109,90/mês",
+        description: "100% fibra + Wi-Fi 6"
+      },
+
+      "700stream": {
+        name: "700 Mbps",
+        price: "R$ 129,90/mês",
+        description:
+          "100% fibra + Wi-Fi 6 + HBO Max ou Disney+"
+      },
+
+      "1000": {
+        name: "1 Giga",
+        price: "R$ 149,90/mês",
+        description: "100% fibra + Wi-Fi 6"
+      }
+
+    };
+
+
+    /*
+      Cria o link do WhatsApp
+      de acordo com o plano indicado.
+    */
+
+    function whatsappLink(planName) {
+
+      const message =
+        "Olá! Vim pelo site da Amigo Internet e fiz o teste de perfil. " +
+        "Tenho interesse no plano " +
+        planName +
+        ". Gostaria de saber mais.";
+
+      return (
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message)
+      );
+
+    }
+
+
+    /*
+      Funcionamento do quiz
+    */
+
+    function quizAnswer(type, value) {
+
+      answers[type] = value;
+
+
+      /*
+        Primeira pergunta:
+        passa para a segunda.
+      */
+
+      if (type === "users") {
+
+        document
+          .getElementById("step1")
+          .classList
+          .remove("active");
+
+        document
+          .getElementById("step2")
+          .classList
+          .add("active");
+
+        return;
+      }
+
+
+      /*
+        Plano padrão.
+      */
+
+      let recommendation = "500";
+
+
+      /*
+        REGRAS DO RECOMENDADOR
+
+        1–2 pessoas + uso básico
+        → 500 Mbps
+
+        Streaming
+        → 600 Mbps
+
+        Streaming com 5+ pessoas
+        → 700 Mbps + streaming
+
+        5+ pessoas / jogos / trabalho / uso variado
+        → 700 Mbps
+
+        Muitos dispositivos + jogos/trabalho/uso variado
+        → 1 Giga
+      */
+
+
+      /*
+        Streaming
+      */
+
+      if (value === "streaming") {
+
+        if (
+          answers.users === "5+" ||
+          answers.users === "many"
+        ) {
+
+          recommendation = "700stream";
+
+        } else {
+
+          recommendation = "600";
+
+        }
+
+      }
+
+
+      /*
+        Uso intenso
+      */
+
+      if (
+        value === "games" ||
+        value === "all" ||
+        answers.users === "5+" ||
+        answers.users === "many"
+      ) {
+
+        recommendation = "700";
+
+      }
+
+
+      /*
+        Muitos dispositivos +
+        jogos/trabalho ou uso variado
+      */
+
+      if (
+        answers.users === "many" &&
+        (
+          value === "games" ||
+          value === "all"
+        )
+      ) {
+
+        recommendation = "1000";
+
+      }
+
+
+      /*
+        Streaming com muita gente/dispositivos
+      */
+
+      if (
+        value === "streaming" &&
+        (
+          answers.users === "5+" ||
+          answers.users === "many"
+        )
+      ) {
+
+        recommendation = "700stream";
+
+      }
+
+
+      /*
+        Pega informações do plano.
+      */
+
+      const plan = plans[recommendation];
+
+
+      /*
+        Esconde pergunta 2.
+      */
+
+      document
+        .getElementById("step2")
+        .classList
+        .remove("active");
+
+
+      /*
+        Mostra resultado.
+      */
+
+      document
+        .getElementById("recommended")
+        .textContent = plan.name;
+
+
+      document
+        .getElementById("resultPrice")
+        .textContent = plan.price;
+
+
+      document
+        .getElementById("resultDescription")
+        .textContent = plan.description;
+
+
+      /*
+        Configura WhatsApp
+        específico para o resultado.
+      */
+
+      const resultBtn =
+        document.getElementById("resultBtn");
+
+      resultBtn.href =
+        whatsappLink(plan.name);
+
+
+      /*
+        Exibe resultado.
+      */
+
+      document
+        .getElementById("result")
+        .classList
+        .add("show");
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
